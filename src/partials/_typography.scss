@@ -1,0 +1,61 @@
+@import './queries';
+
+$font-body: 'Open sans', sans-serif;
+$font-heading: 'Noto sans', Helvetica, sans-serif;
+
+// Font-family
+h1, h2, h3, button {
+    font-family: $font-heading;
+}
+
+// Mobile font sizes
+h1 {
+    font-size: 1.5rem;
+
+    @media only screen and (min-width: 330px) {
+        font-size: 2rem;
+    }
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.375rem;
+}
+
+// Tablet
+@media #{$tablet} {
+    h1 {
+        font-size: 2.625rem;
+    }
+
+    h2 {
+        font-size: 2.125rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+// Laptop
+@media #{$laptop} {
+    h1 {
+        font-size: 3rem;
+    }
+    
+}
+
+
+// Desktop font sizes
+@media #{$desktop} {
+    h1 {
+        font-size: 4rem;
+    }
+    
+    h2 {
+        font-size: 2.625rem;
+    }
+}

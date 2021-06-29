@@ -1,0 +1,67 @@
+@import '../partials/colors';
+@import '../partials/typography';
+
+.dropdown {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0px;
+    left: 0px;
+    transform: translateY(-100%);
+    transition: 400ms all ease-in-out;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom right, darken($color-normal, 3%), lighten($color-normal, 2%));
+    z-index: 0;
+    padding-top: 10rem;
+    z-index: 98;
+}
+
+.dropdownOpen {
+    transform: translateY(0px);
+}
+
+.links {
+    // text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+        font-family: $font-heading;
+        font-size: 1.75rem;
+        color: $color-white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+        transition: 150ms all ease-in-out;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        width: fit-content;
+
+        &:hover {
+            border-bottom: 1px solid $color-white;
+        }
+    }
+}
+
+.footer {
+    align-self: flex-end;
+    height: 5rem;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    a {
+        text-decoration: none;
+        color: $color-white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+        transition: 150ms all ease-in-out;
+
+        &:hover {
+            border-bottom: 1px solid $color-white;
+        }
+    }
+}

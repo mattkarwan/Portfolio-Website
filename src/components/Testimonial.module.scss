@@ -1,0 +1,138 @@
+@import '../partials/queries';
+@import '../partials/colors';
+@import '../partials/typography';
+
+.background {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 16px;
+    padding-top: 32px;
+    margin: 1.5rem auto;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media #{$laptop} {
+        padding: 32px 48px;
+    }
+}
+
+.quotationMarkTop,
+.quotationMarkBottom {
+    position: absolute;
+    font-size: 3rem;
+    font-family: $font-heading;
+    font-style: italic;
+    color: $color-web_design;
+    opacity: 0.3;
+
+    @media #{$laptop} {
+        font-size: 4rem;
+    }
+}
+
+.quotationMarkTop {
+    top: 16px;
+    left: 16px;
+}
+
+.quotationMarkBottom {
+    bottom: 6.0625rem;;
+    right: 16px;
+}
+
+.quote {
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+    font-size: 0.875rem;
+    color: $color-quote-text;
+    padding: 0 16px;
+}
+
+.referrerInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    margin: 1rem auto 0 auto;
+    width: 100%;
+    height: 6.625rem;
+
+    p {
+        color: $color-white;
+        z-index: 10;
+    }
+
+    .name {
+        font-weight: bold;
+    }
+}
+
+.imageContainer {
+    position: relative;
+    height: 3.125rem;
+    width: 3.125rem;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+
+    @media #{$laptop} {
+        grid-row: span 2;
+        margin-bottom: 1rem;
+    }
+
+    .image {
+        border-radius: 50%;
+        overflow: hidden;
+        height: 3.125rem;
+        width: 3.125rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 90%;
+            height: auto;
+            grid-row: span 2;
+            z-index: 20;
+            position: relative;
+            line-height: 3.125rem;
+        }
+    }
+
+    .imgBackground {
+        background-color: $color-white;
+        width: 3.625rem;
+        height: 3.625rem;
+        position: absolute;
+        top: -0.25rem;
+        border-radius: 50%;
+        left: -0.25rem;
+        z-index: 19;
+    }
+}
+
+.referrerBackground {
+    position: absolute;
+    width: 100%;
+    height: 5.8125rem;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: linear-gradient(to bottom right, $color-web_design, darken($color-web_design, 5%));
+
+    @media #{$laptop} {
+        height: 6.8125rem;
+    }
+}
+
+
+// 1 rem padding
+// 6.625rem for grid
+// - half of image container
+
+// 3.625

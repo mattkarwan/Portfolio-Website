@@ -1,0 +1,202 @@
+@import '../partials/colors';
+@import '../partials/queries';
+
+.avatarHolder {
+    position: relative;
+    width: 40vw;
+    max-width: 175px;
+    cursor: pointer;
+    justify-self: center;
+    z-index: -0;
+
+    @media #{$laptop} {
+        grid-row: span 2;
+        justify-self: end;
+        align-self: end;
+    }
+
+    @media #{$desktop} {
+        max-width: 200px;
+    }
+}
+
+.avatarBg {
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    width: 90%;
+    height: 55%;
+    border-radius: 4px;
+    background: #f1f1f1;
+    z-index: -1;
+}
+
+.avatar {
+    animation-name: moveHead;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    overflow: visible;
+    transform-origin: bottom;
+    position: relative;
+    pointer-events: none;
+}
+  
+.eyebrows {
+    animation-duration: 100ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.eyebrows_up {
+    animation-name: liftEyebrows;
+}
+
+.eyebrows_down {
+    animation-name: dropEyebrows;
+}
+
+.mouth {
+    animation-duration: 100ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translate(114.772px, 127.557px) scaleY(0.15);
+}
+
+.mouth_open {
+    animation-name: openMouth;
+}
+
+.mouth_close {
+    animation-name: closeMouth;
+}
+
+.arm {
+    animation-name: moveArm;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform-origin: top;    
+}
+
+.steam1 {
+    animation-name: steam;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.steam2 {
+    animation-name: steam2;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 1.75s;
+    transform-origin: center;
+    transform-box: border-box;
+}
+
+.shirt {
+    fill: $color-text;
+}
+
+.skin {
+    fill: #ffdbb4;
+}
+
+.transparent {
+    opacity: 0.1;
+}
+
+.steam1, .steam2 {
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+.hair {
+    fill: #754c24;
+}
+
+.black {
+    fill: $color-text;
+}
+
+.tongue {
+    fill: #d4001d;
+}
+
+.teeth {
+    fill: #f1f1f1;
+}
+
+.glass {
+    fill: #fafafa;
+    opacity: 0.3;
+}
+
+.shadow, .glass, .frame {
+    stroke: $color-text;
+}
+
+.shadow, .mug_handle, .glass, .frame {
+    stroke-miterlimit: 10;
+}
+
+.shadow, .mug_handle, .frame {
+    fill: none;
+}
+
+.shadow {
+    stroke-width: 1.25px;
+    opacity: 0.1;
+}
+
+.mug {
+    fill: lighten($color-text, 3%);
+}
+
+.mug_handle {
+    stroke: lighten($color-text, 3%);
+    stroke-width: 3px;
+}
+
+@keyframes moveHead {
+    25% { transform: rotate(0.75deg);}
+    75% { transform: rotate(-0.75deg);}
+}
+
+@keyframes liftEyebrows {
+    0% { transform: translate(68.366px, 0.409px);}
+    100% { transform: translate(68.366px, -2.409px);}
+}
+
+@keyframes dropEyebrows {
+    0% { transform: translate(68.366px, -2.409px);}
+    100% { transform: translate(68.366px, 0.409px);}
+}
+
+@keyframes openMouth {
+    0% { transform: translate(114.772px, 127.557px) scaleY(0.15);}
+    100% { transform: translate(114.772px, 127.557px) scaleY(1);}
+}
+
+@keyframes closeMouth {
+    0% { transform: translate(114.772px, 127.557px) scaleY(1);}
+    100% { transform: translate(114.772px, 127.557px) scaleY(0.15);}
+}
+
+@keyframes moveArm {
+    0% { transform: translate(22px, 179px) rotate(6deg);}
+    50% {transform: translate(18px, 179px) rotate(0deg);}
+    100% {transform: translate(22px, 179px) rotate(6deg);}
+}
+
+@keyframes steam {
+    0% { transform: translate(-0.756px, 76.03px); opacity: 0;}
+    5% { transform: translate(-0.756px, 76.03px); opacity: 0.4;}
+    100% { transform: translate(-0.756px, 56.03px); opacity: 0;}
+}
+@keyframes steam2 {
+    0% { transform: translate(-0.756px, 76.03px); opacity: 0;}
+    5% { transform: translate(-0.756px, 76.03px); opacity: 0.4;}
+    100% { transform: translate(-0.756px, 56.03px); opacity: 0;}
+}

@@ -1,0 +1,47 @@
+@import '../partials/queries';
+
+.aboutMeContainer {
+    padding: 64px 16px;
+    background: linear-gradient(#fff, #fff);
+    scroll-margin-top: 16px;
+
+    @media #{$tablet} {
+        padding: 64px 32px;
+    }
+
+    @media #{$desktop} {
+        padding: 75px 32px;
+    }
+}
+
+.aboutMeContent {
+    margin: 0 auto;
+
+    @media #{$desktop} {
+        max-width: 1000px;
+    }
+}
+
+.introParagraph {
+    p {
+        margin: 1rem 0;
+    }
+    
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    margin: 3.125rem auto;
+
+    @media #{$laptop} {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media #{$desktop} {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 22px;
+    }
+}

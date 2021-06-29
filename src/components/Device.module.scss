@@ -1,0 +1,76 @@
+.svg_devices {
+    width: 100%;
+    height: 100%;
+}
+
+.shadow {
+    opacity: 0.2;
+}
+
+.mobile_frame_shadow, .frame_no_fill {
+    fill: none;
+}
+
+.frontOfBase, .frontOfBase2, .mobile_frame_shadow, .frame_no_fill, .device_frame_2, .silverBase, .silverBase_2 {
+    fill-rule: evenodd;
+}
+
+.device_frame, .device_frame_2 {
+    fill: #151515;
+}
+
+.silverBase {
+    fill: #b3b3b3;
+}
+
+.silverBase_2 {
+    fill: #a8a8a8;
+}
+
+.silverBase_3 {
+    fill: #dbdbdb;
+}
+
+.silverBase_4 {
+    fill: #c5c5c5;
+}
+
+.frontOfBase {
+    fill: #1f1f1f;
+}
+
+.frontOfBase_2 {
+    fill: #161616;
+}
+
+.desktop_stand {
+    fill: #383737;
+}
+
+.desktop_stand_2 {
+    fill: #2b2b2b;
+}
+
+.desktop_stand_3 {
+    fill: #1c1c1c;
+}
+
+.desktop_stand_4 {
+    fill: #090909;
+}
+
+.desktop_stand_shadow {
+    fill: rgba(0,0,0,0);
+}
+
+.mobile_frame_shadow {
+    opacity: 0.45;
+}
+
+.desktop_screenshot_overlay {
+    fill: rgba(0, 0, 0, 0.05);
+}
+
+.mobile_screenshot_overlay {
+    fill: rgba(0, 0, 0, 0.05);
+}

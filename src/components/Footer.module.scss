@@ -1,0 +1,86 @@
+@import '../partials/colors';
+@import '../partials/queries';
+
+.footer {
+    width: 100%;
+    padding: 2rem 1rem 1rem;
+    background: linear-gradient(to bottom right, darken($color-text, 3%), lighten($color-text, 3%));
+    background: $color-background;
+
+    @media #{$tablet} {
+        padding: 2rem 2rem 1rem;
+    }
+}
+
+.footerContent {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+
+    @media #{$laptop} {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.contactHolder {
+    grid-row: 2;
+
+    @media #{$laptop} {
+        grid-row: 1;
+    }
+}
+
+.contactList {
+    list-style: none;
+    
+    a {
+        color: $color-text;
+        margin-right: 1rem;
+
+        &:hover {
+            color: $color-link;
+        }
+
+        &:hover svg {
+            fill: $color-link;
+            opacity: 1;
+        }
+    }
+
+    svg {
+        height: 1.75rem;
+        fill: $color-text;
+        opacity: 0.8;
+        transition: 150ms all ease;
+        margin-top: 0.25rem;
+    }
+}
+
+.navigationGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    grid-row: 1;
+
+    li {
+        cursor: pointer;
+        width: fit-content;
+        transition: color 150ms ease;
+
+        &:hover {
+            color: $color-link;
+        }
+    }
+}
+
+.copyright {
+    text-align: center;
+    color: $color-copyright;
+    grid-column: span 1;
+
+    @media #{$laptop} {
+        grid-column: span 2;
+    }
+}

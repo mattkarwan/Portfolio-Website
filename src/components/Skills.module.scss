@@ -1,0 +1,86 @@
+@import '../partials/colors';
+@import '../partials/queries';
+
+.container {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    padding: 22px 16px;
+    background-color: #fefefe;
+    box-shadow: 
+        -4px -4px 8px rgba(245, 245, 245, 0.3),
+        4px 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.iconAndHeading {
+    width: 100%;
+    padding: 8px 0px 16px 0;
+    display: flex;
+    align-items: bottom;
+}
+
+.icon {
+    width: 2rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.icon svg {
+    width: auto;
+    height: 100%;
+}
+
+.text {
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+        text-align: left;
+    }
+
+    li {
+        margin-left: 1em;
+    }
+
+    li::before {
+        content: "\2022";
+        font-weight: bold;
+        display: inline-block;
+        width: 0.75rem;
+        margin-left: -0.75em;
+    }
+}
+
+.webDevelopment {
+    li::before {
+        color: $color-web_dev;
+    }
+}
+
+.webDesign {
+    li::before {
+        color: $color-web_design;
+    }
+}
+
+.seo {
+    li::before {
+        color: $color-seo;
+    }
+}
+
+.span {
+    @media #{$laptop} {
+        grid-column: span 2;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    @media #{$desktop} {
+        grid-column: unset;
+        width: 100%;
+    }
+}
