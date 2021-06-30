@@ -8,6 +8,11 @@ import GladysDesktop_Small from '../assets/screenshots/gladys&jack/desktop_small
 import GladysMobile_Large from '../assets/screenshots/gladys&jack/mobile_large.webp';
 import GladysMobile_Small from '../assets/screenshots/gladys&jack/mobile_small.jpg';
 
+import VillagersDesktop_Large from '../assets/screenshots/twelve_villagers/desktop_large.webp';
+import VillagersDesktop_Small from '../assets/screenshots/twelve_villagers/desktop_small.webp';
+import VillagersMobile_Large from '../assets/screenshots/twelve_villagers/mobile_large.webp';
+import VillagersMobile_Small from '../assets/screenshots/twelve_villagers/mobile_small.webp';
+
 import TurtleDesktop_Large from '../assets/screenshots/turtle/desktop_large.jpg';
 import TurtleDesktop_Small from '../assets/screenshots/turtle/desktop_small.jpg';
 import TurtleMobile_Large from '../assets/screenshots/turtle/mobile_large.jpg';
@@ -38,6 +43,20 @@ export const projects = [
         mobileImg_large : GladysMobile_Large,
         mobileImg_small : GladysMobile_Small,
         color : "#3a3a3a"
+    },
+
+    {
+        name : "Twelve Villagers",
+        description : "Visualisation of the 'Twelve Villagers' riddle seen in Brooklyn Nine-Nine. Created with JavaScript as a personal project.",
+        url : "https://mattkarwan.github.io/Twelve-Villagers/",
+        desktopId : "villagersDesktop",
+        desktopImg_large : VillagersDesktop_Large,
+        desktopImg_small : VillagersDesktop_Small,
+        mobileId : "villagersMobile",
+        mobileImg_large : VillagersMobile_Large,
+        mobileImg_small : VillagersMobile_Small,
+        color : "#005FB8"
+
     },
 
     {
